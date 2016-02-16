@@ -1,0 +1,29 @@
+<div class="photo-card mdl-shadow--4dp">
+    <div class="img-area">
+        <img ng-src="{{ photo.imgUrl }}">
+    </div>
+    <div class="text-area mdl-color-text--grey-700">
+    	<div class="text-area-bg">
+	        <button class="mdl-button mdl-js-button mdl-button--fab mdl-js-ripple-effect mdl-button--colored">
+		        <i class="material-icons">favorite_white</i>
+		    </button>
+		    <div class="meta">
+		        <div class="avatar">
+		            <img ng-src="{{ photo.authorAvatarUrl }}">
+		        </div>
+		        <div class="meta-area__avatar">
+		            <div>{{photo.author}}</div>
+		            <div>{{photo.pubDate | date}}</div>
+		        </div>
+		        <div class="section-spacer"></div>
+		        <div class="upvotes-section">
+					{{upvotes}}
+		        </div>
+		    </div>
+		    <div class="photo-content-area">
+		        <p>{{photo.postcontent}}</p>
+		    </div>
+		</div>
+	</div>
+	<comments></comments>
+</div>
